@@ -31,5 +31,6 @@ class DashboardController extends AbstractDashboardController
     {
         yield MenuItem::linkToDashboard('Dashboard', 'fa fa-home');
         yield MenuItem::linkToCrud('Horaires d\'ouverture', 'fa-regular fa-clock', OpeningHoursCrudController::getEntityFqcn());
+        yield MenuItem::linkToCrud('Galerie d\'images', 'fa-sharp fa-regular fa-images', GalleryCrudController::getEntityFqcn());
     }
 }
