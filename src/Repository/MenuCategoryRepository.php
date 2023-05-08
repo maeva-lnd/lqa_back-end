@@ -2,6 +2,7 @@
 
 namespace App\Repository;
 
+use App\Entity\Menu;
 use App\Entity\MenuCategory;
 use Doctrine\Bundle\DoctrineBundle\Repository\ServiceEntityRepository;
 use Doctrine\Persistence\ManagerRegistry;
@@ -37,5 +38,21 @@ class MenuCategoryRepository extends ServiceEntityRepository
         if ($flush) {
             $this->getEntityManager()->flush();
         }
+    }
+
+    /**
+     * @return MenuCategory[] Returns an array of MenuCategory objects
+     */
+    public function findByMenu(Menu $menu): array
+    {
+        return $this->createQueryBuilder('mc')
+            ->select('mc')
+            ->join('mc.dishesMenus', 'md')
+            ->where('md.menu = :menuId')
+            ->setParameter('menuId', $menu->getId())
+            ->orderBy('mc.id', 'ASC')
+            ->getQuery()
+            ->getResult()
+        ;
     }
 }

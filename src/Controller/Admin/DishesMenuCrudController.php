@@ -23,7 +23,7 @@ class DishesMenuCrudController extends AbstractCrudController
             IdField::new('id')->hideOnForm(),
             AssociationField::new('menu', 'Nom du menu'),
             AssociationField::new('category', 'Catégorie'),
-            TextField::new('name', 'Nom du menu'),
+            TextField::new('name', 'Nom du plat'),
             TextareaField::new('description', 'Description du menu')
         ];
     }
