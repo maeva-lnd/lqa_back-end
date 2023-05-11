@@ -19,7 +19,7 @@ class DashboardController extends AbstractDashboardController
     #[Route('/admin', name: 'admin')]
     public function index(): Response
     {
-        return $this->redirect($this->adminUrlGenerator->setController(OpeningHoursCrudController::class)->generateUrl());
+        return $this->redirect($this->adminUrlGenerator->setController(ReservationCrudController::class)->generateUrl());
     }
 
     public function configureDashboard(): Dashboard
@@ -40,5 +40,7 @@ class DashboardController extends AbstractDashboardController
         yield MenuItem::linkToCrud('Plats', 'fa-solid fa-utensils', DishesMenuCrudController::getEntityFqcn());
         yield MenuItem::section('A la carte');
         yield MenuItem::linkToCrud('Plats', 'fa-solid fa-utensils', DishesCardCrudController::getEntityFqcn());
+        yield MenuItem::section('Configuration');
+        yield MenuItem::linkToCrud('Configuration', 'fa-solid fa-utensils', ConfigurationCrudController::getEntityFqcn());
     }
 }

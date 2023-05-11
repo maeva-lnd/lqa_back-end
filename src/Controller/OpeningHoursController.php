@@ -18,7 +18,6 @@ class OpeningHoursController extends AbstractController
     ){
     }
 
-
     #[Route('api/openinghours', name: 'opening_hours', methods: 'GET')]
     public function getAllOpeningHours(): JsonResponse
     {
