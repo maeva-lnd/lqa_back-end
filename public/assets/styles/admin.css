@@ -1,0 +1,31 @@
+.btn-primary, .btn-primary:not(:disabled):not(.disabled):not(.btn-link):not(.btn-danger):active,
+.btn-primary:not(:disabled):not(.disabled):not(.btn-link):not(.btn-danger):active:focus,
+.btn-primary:not(:disabled):not(.disabled):not(.btn-link):not(.btn-danger):focus,
+.btn-primary:not(:disabled):not(.disabled):not(.btn-link):not(.btn-danger):hover {
+    background-color: #c44900;
+    color: var(--button-primary-color);
+}
+
+.page-item.active .page-link, .page-item.active .page-link:hover {
+    background: #c44900;
+    border-color: #c44900;
+    color: var(--pagination-active-color);
+}
+
+a {
+    color: #64748B;
+    text-decoration: var(--link-hover-decoration);
+}
+
+a:hover {
+    color: #c44900;
+    text-decoration: var(--link-hover-decoration);
+}
+
+item.active:not(.expanded) a {
+    color: #c44900;
+}
+
+#main-menu .menu .menu-item.active:not(.expanded) .menu-icon, #main-menu .menu .menu-item.active:not(.expanded) a {
+    color: #c44900;
+}
