@@ -2,7 +2,6 @@
 
 namespace App\Controller;
 
-use App\Entity\OpeningHours;
 use App\Entity\Reservation;
 use App\Repository\ConfigurationRepository;
 use App\Repository\OpeningHoursRepository;
