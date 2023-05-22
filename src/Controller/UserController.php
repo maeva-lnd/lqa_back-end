@@ -63,4 +63,10 @@ class UserController extends AbstractController
         return new JsonResponse($jsonUser, Response::HTTP_OK, [], true);
     }
 
+    #[Route('/', name: 'home', methods: ['GET'])]
+    public function home(): Response
+    {
+        return $this->redirectToRoute('admin');
+    }
+
 }

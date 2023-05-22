@@ -19,11 +19,6 @@ class ContactCrudController extends AbstractCrudController
         return Contact::class;
     }
 
-    public function configureActions(Actions $actions): Actions
-    {
-        return $actions
-            ->disable(Action::EDIT);
-    }
 
     public function configureFields(string $pageName): iterable
     {
