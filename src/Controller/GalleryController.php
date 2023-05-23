@@ -20,7 +20,7 @@ class GalleryController extends AbstractController
     #[Route('api/gallery', name: 'gallery', methods: ['GET'])]
     public function getAllGallery(): JsonResponse
     {
-        $gallery = $this->galleryRepository->findAll();
+        $gallery = $this->galleryRepository->findBy([], ['id' => 'ASC'], 4);
         $jsonGallery = $this->serializer->serialize($gallery, 'json');
         return new JsonResponse($jsonGallery, Response::HTTP_OK, [], true);
     }
