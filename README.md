@@ -4,7 +4,7 @@ Dans le cadre d’une évaluation pour l’obtention du titre Développeur web e
 
 Ce dépot concerne la partie réalisée en Symfony.
 
-Pour en savoir plus sur la partie front, vous pouvez allez sur le dépôt suivant : [https://github.com/maeva-lnd/lqa_front-end](https://github.com/maeva-lnd/lqa_front-end)
+Pour en savoir plus sur la partie front, vous pouvez aller sur le dépôt suivant : [https://github.com/maeva-lnd/lqa_front-end](https://github.com/maeva-lnd/lqa_front-end)
 
 Les annexes de ce projet se trouvent ici : [https://github.com/maeva-lnd/lqa_annexes](https://github.com/maeva-lnd/lqa_annexes)
 
